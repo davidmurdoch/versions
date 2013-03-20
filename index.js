@@ -41,8 +41,8 @@ function Versions(options) {
   if (!options.cloned) {
     this.read('../../node_modules/package.json');    // For version number
     this.read('./versions.json');                    // For our defaults
-    this.read('../../node_modules/versions.json');   // For their defaults
-    this.read('../../node_modules/versions.js');     // For their defaults
+    this.read('../../versions.json');                // For their defaults
+    this.read('../../versions.js');                  // For their defaults
   } else {
     Object.keys(options.cloned).forEach(function merge(key) {
       // Merge in the cloned configuration, silently
